@@ -5,8 +5,8 @@ Route::any('hosue', 'HomeController@index');
 Route::any('do_reg', 'HomeController@do_reg');
 Route::any('show_user', 'UserController@show_user');
 Route::any('destroy/{id}', 'UserController@destroy');
-Route::any('edit/{id}', 'UserController@edit');
-Route::any('update/{id}', 'UserController@update');
+Route::get('edit/{id}', 'UserController@edit');
+Route::post('update/{id}', 'UserController@update');
 
 // Route::any('/', 'Auth\AuthController@getLogin');
 

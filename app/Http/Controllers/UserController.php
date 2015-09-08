@@ -21,7 +21,9 @@ class UserController extends Controller
 
     public function destroy($id)
     {
-    	DB::table('reg')->where('id', '=', $id)->delete();
+    	$data = Reg::where('id', $id)->first();
+    	$data->delete();
+    	// DB::table('reg')->where('id', '=', $id)->delete();
     	return redirect ('show_user');
     }
     public function edit($id)
