@@ -7,12 +7,11 @@
 	
 </head>
 <body>	
-<div class="container">
-	
+<div class="container">	
 			@include('nav')
 	<div class="row">
 		<div class="col-lg-9 col-lg-offset-1">			 
-			@yield('pol')			  
+			@yield('content')			  
 		</div> 	
 	</div>
 </div>

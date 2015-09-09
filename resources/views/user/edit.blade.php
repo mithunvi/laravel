@@ -5,7 +5,8 @@
 
       <div class="form-group">
         <label for="exampleInputEmail1">Name</label>
-        <input value="{{$user->name}}" type="text" class="form-control" id="exampleInputEmail1" name="name">
+        Name : <input value="{{$user->name}}" type="text" class="form-control"  name="name"><br/>
+        Email :<input value="{{$user->email}}" type="text" class="form-control"  name="email"><br/>
       </div>
      
       <button type="submit" class="btn btn-default">Submit</button>

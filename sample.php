@@ -24,22 +24,17 @@ class UserController extends Controller
         $data ->name =$request->name;
         $data ->email =$request->email;
         $data ->save();
-        if($data->id){
-            Session::flash('success_message', 'Data has been inserted');
-            return redirect('show_user');
-        }
     }
 
     public function show_user(){
 
-        $user['data'] = Reg:: all();
+        $user ['data'] = Reg:: all();
         return view ('user.show_user',$user);
     }
     public function delete($id){
 
         $data = Reg:: where ('id',$id)->first();
         $data->delete();
-        Session::flash('success_message', 'Data has been deleted');
         return redirect ('show_user'); 
     }
 
@@ -55,8 +50,6 @@ class UserController extends Controller
         $data ->name = $request->input('name'); 
         $data ->email = $request->input('email'); 
         $data ->save();
-        Session::flash('success_message', 'Data has been updated');
-        return redirect ('show_user'); 
     }
-     
+    
 }

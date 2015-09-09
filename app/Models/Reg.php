@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 
 Class Reg extends Model{
 
-	protected $table='reg';
-	protected $dateFormat='U';
+	protected $table ='reg';
+	protected $dateFormat ='U';
 
 }

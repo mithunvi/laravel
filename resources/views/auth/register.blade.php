@@ -11,11 +11,12 @@
     </ul>
 </div>
 @endif
+<!-- resources/views/auth/register.blade.php -->
 
 <form method="POST" action="/auth/register">
     {!! csrf_field() !!}
 
-    <div class="col-md-6">
+    <div>
         Name
         <input type="text" name="name" value="{{ old('name') }}">
     </div>
@@ -30,7 +31,7 @@
         <input type="password" name="password">
     </div>
 
-    <div class="col-md-6">
+    <div>
         Confirm Password
         <input type="password" name="password_confirmation">
     </div>
@@ -39,5 +40,4 @@
         <button type="submit">Register</button>
     </div>
 </form>
-
 @endsection
